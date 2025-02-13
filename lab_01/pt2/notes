@@ -1,0 +1,6 @@
+if (sendto(client_socket, buffer, strlen(buffer), 0, (struct sockaddr *)&addr, sizeof(struct sockaddr_un)) == -1)
+    {
+        perror("sendto");
+        close(client_socket);
+        exit(EXIT_FAILURE);
+    }
